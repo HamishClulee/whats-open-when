@@ -1,0 +1,81 @@
+$primary: #fb3640
+$secondary: #0a2463
+$tertiary: #605f5e
+$highlight: #247ba0
+$additional: #48a9a6
+$off-white: #e2e2e2
+$high-contrast: #f9dc5c
+
+$link: #1976D2
+$font: #212121
+
+// 0a2463,fb3640,605f5e,247ba0,e2e2e2,f9dc5c,48a9a6
+// 0a2463,fb3640,605f5e,247ba0,e2e2e2,
+// EA2336 • FFAC0E • FCEEDD • C4AF00
+// FCEEDD • EA2336 • 9B8B03 • FCEEDD
+
+$dark-gray: #696969	
+$medium-gray: #A9A9A9
+$light-gray: #D3D3D3
+$very-light-gray: #F4F4F4
+
+$primary-light: lighten($primary, 10)
+$primary-dark: darken($primary, 20)
+$secondary-light: lighten($secondary, 10)
+$secondary-dark: darken($secondary, 10)
+$tertiary-light: lighten($tertiary, 20)
+$tertiary-dark: darken($tertiary, 20)
+$highlight-light: lighten($highlight, 20)
+$highlight-dark: darken($highlight, 30%)
+$link-light: lighten($link, 20)
+$font-light: lighten($font, 30)
+$font-dark: darken($font, 30)
+$font-very-light: lighten($font, 35)
+
+$h1-fontsize: 3.6rem !default
+$h2-fontsize: 3.1rem !default
+$h3-fontsize: 2.4rem !default
+$h4-fontsize: 2rem !default
+$h5-fontsize: 1.4rem !default
+$h6-fontsize: 1rem !default
+
+$heading-font: 'Playfair Display', serif
+$body-font: 'Source Sans Pro', sans-serif
+
+$navbar-height: 80px
+$docs-sidebar-width: 300px
+
+body
+    color: $font
+    padding: 0
+    margin: 0
+    font-family: sans-serif
+    width: 100%
+
+html
+    line-height: 1.5
+    color: $font-dark
+    font-weight: normal
+
+
+@import "typography"
+@import "button"
+@import "transitions"
+@import "containers"
+@import "flexhelp"
+@import "docs"
+
+:export
+    primary: $primary
+    secondary: $secondary
+    tertiary: $tertiary
+    highlight: $highlight
+    additional: $additional
+    link: $link
+    font: $font
+    darkgray: $dark-gray
+    mediumgray: $medium-gray
+    light-gray: $light-gray
+    verylightgray: $very-light-gray
+
+

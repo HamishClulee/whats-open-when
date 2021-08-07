@@ -1,0 +1,29 @@
+"serve:main": "env VUE_CLI_SERVICE_CONFIG_PATH=./vue.config.main.js vue-cli-service serve main-app/src/main.ts",
+
+  "scripts": {
+
+    "serve:main": "env VUE_CLI_SERVICE_CONFIG_PATH=\"$PWD/vue.config.main.js\" vue-cli-service serve --port 8080 main-app/src/main.ts --fix --skip-plugin @vue/cli-plugin-pwa,pwa --dest main-app/dist",
+    "build:main": "env VUE_CLI_SERVICE_CONFIG_PATH=\"$PWD/vue.config.main.js\" vue-cli-service build --dest main-app/dist main-app/src/main.ts",
+
+    "serve:subdoms": "env VUE_CLI_SERVICE_CONFIG_PATH=\"$PWD/vue.config.subdoms.js\" vue-cli-service serve --port 7070 subdoms-app/src/main.ts",
+    "build:subdoms": "env VUE_CLI_SERVICE_CONFIG_PATH=\"$PWD/vue.config.subdoms.js\" vue-cli-service build --dest subdoms-app/dist subdoms-app/src/main.ts --fix --skip-plugin @vue/cli-plugin-pwa,pwa"
+
+  },
+
+  // local
+  db.users.findOneAndUpdate({ "_id" : ObjectId("5f5d8a2d62eb6339d17155c1") }, { $set: {"role": "ADMIN" } })
+  // mats
+  db.users.findOneAndUpdate({ "_id" : ObjectId("5f5d8d0d145b005c281a279f") }, { $set: {"role": "ADMIN" } })
+
+/* CSV */
+0a2463,fb3640,605f5e,247ba0,e2e2e2,f9dc5c,48a9a6
+
+/* Array */
+["0a2463","fb3640","605f5e","247ba0","e2e2e2","f9dc5c","48a9a6"]
+
+/* Object */
+{"Royal Blue Dark":"0a2463","Red Salsa":"fb3640","Davys Grey":"605f5e","Celadon Blue":"247ba0","Platinum":"e2e2e2","Naples Yellow":"f9dc5c","Verdigris":"48a9a6"}
+
+/* Extended Array */
+[{"name":"Royal Blue Dark","hex":"0a2463","rgb":[10,36,99],"cmyk":[90,64,0,61],"hsb":[222,90,39],"hsl":[222,82,21],"lab":[17,17,-40]},{"name":"Red Salsa","hex":"fb3640","rgb":[251,54,64],"cmyk":[0,78,75,2],"hsb":[357,78,98],"hsl":[357,96,60],"lab":[56,72,43]},{"name":"Davys Grey","hex":"605f5e","rgb":[96,95,94],"cmyk":[0,1,2,62],"hsb":[30,2,38],"hsl":[30,1,37],"lab":[40,0,1]},{"name":"Celadon Blue","hex":"247ba0","rgb":[36,123,160],"cmyk":[78,23,0,37],"hsb":[198,78,63],"hsl":[198,63,38],"lab":[48,-12,-27]},{"name":"Platinum","hex":"e2e2e2","rgb":[226,226,226],"cmyk":[0,0,0,11],"hsb":[0,0,89],"hsl":[0,0,89],"lab":[90,0,0]},{"name":"Naples Yellow","hex":"f9dc5c","rgb":[249,220,92],"cmyk":[0,12,63,2],"hsb":[49,63,98],"hsl":[49,93,67],"lab":[88,-4,65]},{"name":"Verdigris","hex":"48a9a6","rgb":[72,169,166],"cmyk":[57,0,2,34],"hsb":[178,57,66],"hsl":[178,40,47],"lab":[64,-29,-7]}]
+  

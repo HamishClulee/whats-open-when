@@ -1,0 +1,172 @@
+// Shared styles
+$button-border-color: $secondary
+$button-border: 2px solid $button-border-color !default
+$button-background-focus: transparent !default
+$button-text-color: darken($secondary, 10%)
+$button-font-size: 14px !default
+
+$button-height: 49px !default
+$button-padding: 0 46px !default
+$button-radius: 2px !default
+
+// Large buttons
+$button-large-font-size: 15px !default
+$button-large-icon-font-size: 2.3rem !default
+$button-large-height: $button-height * 1.5 !default
+$button-floating-large-size: 56px !default
+
+// Small buttons
+$button-small-font-size: 13px !default
+$button-small-icon-font-size: 1.2rem !default
+$button-small-height: $button-height * .9 !default
+$button-floating-small-size: $button-height * .9 !default
+
+$button-flat-color: $tertiary !default
+$button-flat-disabled-color: $light-gray !default
+
+$button-floating-background: $secondary !default
+$button-floating-background-hover: $button-floating-background !default
+$button-floating-color: #fff !default
+$button-floating-size: 40px !default
+$button-floating-radius: 50% !default
+
+.button,
+.button-flat
+    background-color: white
+    border: $button-border
+    border-radius: $button-radius
+    display: inline-block
+    height: $button-height
+    line-height: $button-height
+    padding: $button-padding
+    text-transform: uppercase
+    vertical-align: middle
+    -webkit-tap-highlight-color: transparent // Gets rid of tap active state
+.button,
+.button-floating
+    &:focus
+        background-color: darken($secondary, 10%)
+        color: darken($secondary, 80%)
+.button
+    text-decoration: none
+    color: $button-text-color
+    font-family: $body-font
+    font-weight: bolder
+    background-color: transparent
+    text-align: center
+    letter-spacing: .5px
+    transition: background-color .2s ease-out
+    cursor: pointer
+    &:hover
+        opacity: 0.8
+
+.button.primary
+    background-color: $primary
+    border: $primary
+    color: white
+    font-family: $heading-font
+
+.button.secondary
+    background-color: $secondary
+    border: $secondary
+    color: white
+    font-family: $heading-font
+.button.tertiary
+    background-color: $tertiary
+    border: $tertiary
+    color: white
+    font-family: $heading-font
+.button.link
+    background-color: $link
+    border: $link
+    color: white
+    font-family: $heading-font
+
+// Floating button
+.button-floating
+    &:hover
+        opacity: 0.8
+    &:before
+        border-radius: 0
+    &.button-large
+        &.halfway-fab
+            bottom: -$button-floating-large-size / 2
+        width: $button-floating-large-size
+        height: $button-floating-large-size
+        padding: 0
+        i
+            line-height: $button-floating-large-size
+    &.button-small
+        &.halfway-fab
+            bottom: -$button-floating-small-size / 2
+        width: $button-floating-small-size
+        height: $button-floating-small-size
+        i
+            line-height: $button-floating-small-size
+    &.halfway-fab
+        &.left
+            right: auto
+            left: 24px
+        position: absolute
+        right: 24px
+        bottom: -$button-floating-size / 2
+    display: inline-block
+    color: $button-text-color
+    position: relative
+    overflow: hidden
+    z-index: 1
+    width: $button-floating-size
+    height: $button-floating-size
+    line-height: $button-floating-size
+    padding: 0
+    background-color: $button-floating-background
+    border-radius: $button-floating-radius
+    transition: background-color .3s
+    cursor: pointer
+    vertical-align: middle
+button.button-floating
+    border: $button-border
+.button-flat
+    box-shadow: none
+    background-color: transparent
+    color: $button-flat-color
+    cursor: pointer
+    transition: background-color .2s
+    &:focus,
+    &:hover
+        box-shadow: none
+    &:focus
+        background-color: rgba(0, 0, 0, .1)
+    &.disabled,
+    &.button-flat[disabled]
+        background-color: transparent !important
+        color: $button-flat-disabled-color !important
+        cursor: default
+.button-large
+    @extend .button
+    height: $button-large-height
+    line-height: $button-large-height
+    font-size: $button-large-font-size
+    padding: 0 28px
+    i
+        font-size: $button-large-icon-font-size
+.button-small
+    @extend .button
+    height: $button-small-height
+    line-height: $button-small-height
+    font-size: $button-small-font-size
+    i
+        font-size: $button-small-icon-font-size
+.cta-button-home
+    color: white
+    border-color: white
+    width: 50%
+    max-width: 500px
+    min-width: 300px
+    font-size: 18px
+    height: 50px
+    &:hover
+        background-color: white
+        color: #afafaf
+.button-block
+    display: block

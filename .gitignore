@@ -1,0 +1,19 @@
+.DS_Store
+node_modules/
+server/node_modules/
+/dist/
+/.cache/
+erl_crash.dump*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.cache
+report.html
+# Editor directories and files
+/.idea/
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

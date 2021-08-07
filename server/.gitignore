@@ -1,0 +1,7 @@
+node_modules/
+.vscode
+.cache/
+public/static
+*.marko.js
+.env
+.logs/*.log
