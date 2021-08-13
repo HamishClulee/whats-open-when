@@ -17,10 +17,10 @@ class ApiController {
    * @returns {Array<string>} The names of the restaurants open at the specified
    * time. The order of the elements in this array is alphabetical.
    */
-  getRestaurantsOpenAtDayAndTime(_, res) {
-    console.log(res.body);
+  getRestaurantsOpenAtDayAndTime(req, res) {
+    const { day, time } = req.body;
 
-    res.status(200).send({ restaurants: ["Api hit successfully."] });
+    res.status(200).send({ restaurants: [day, time] });
   }
 }
 

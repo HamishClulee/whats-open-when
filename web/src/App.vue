@@ -31,7 +31,7 @@
                         :searchable="false"
                         :allow-empty="false"
                         :value="selectedDay"
-                        @onChange="daySelected"
+                        @select="daySelected"
                     />
                     <button class="button" @click="submitQuery">Whats Open?</button>
                 </div>
