@@ -10,7 +10,10 @@ export default class Api {
     });
   }
 
-  commsCheck() {
-    return this.axios.post("/comms-check");
+  getOpenRestaurantsByDayAndTime({ day, time }) {
+    return this.axios.post("/get-open-restaurants-by-day-and-time", {
+      day,
+      time,
+    });
   }
 }

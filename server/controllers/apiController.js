@@ -1,10 +1,26 @@
+import fs from "fs";
+import luxon from "luxon";
+import path from "path";
 class ApiController {
-  todoRequest(_, res) {
-    try {
-      res.status(200).send({ message: "Api hit successfully." });
-    } catch (e) {
-      return res.send(500).send({ message: "Failure." });
-    }
+  raw;
+
+  constructor() {
+    this.raw = JSON.parse(
+      fs.readFileSync(path.resolve("restaurant_data.json"))
+    );
+  }
+
+  /**
+   * Finds the restaurants open at the specified time.
+   *
+   * @param {luxon.DateTime} time
+   * @returns {Array<string>} The names of the restaurants open at the specified
+   * time. The order of the elements in this array is alphabetical.
+   */
+  getRestaurantsOpenAtDayAndTime(_, res) {
+    console.log(res.body);
+
+    res.status(200).send({ restaurants: ["Api hit successfully."] });
   }
 }
 

@@ -9,7 +9,10 @@ class ApiRoutes {
   apiRoutes = express.Router();
 
   constructor(app) {
-    this.apiRoutes.post("/comms-check", apiController.todoRequest);
+    this.apiRoutes.post(
+      "/get-open-restaurants-by-day-and-time",
+      apiController.getRestaurantsOpenAtDayAndTime
+    );
     app.use("/api", this.apiRoutes);
   }
 }
